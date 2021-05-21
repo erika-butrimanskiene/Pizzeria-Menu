@@ -22,6 +22,7 @@ const addMoreToppingsInputs = () => {
   newToppingInput.classList.add('pizza-topping');
   newToppingInput.classList.add('form-input');
   toppingsList.appendChild(newToppingInput);
+  return;
 };
 
 //--check form inputs (validations)
@@ -71,7 +72,7 @@ const addNewPizzaSubmit = () => {
   localStorage.setItem('pizzasList', JSON.stringify(pizzasList));
 
   clearFormInputs();
-  successfullMsg.innerText = 'Pizza added successfully!';
+  return (successfullMsg.innerText = 'Pizza added successfully!');
 };
 
 const clearFormInputs = () => {
@@ -79,6 +80,7 @@ const clearFormInputs = () => {
   formInputs.forEach((item) => {
     item.value = '';
   });
+  return;
 };
 
 const createNewPizzaObject = () => {
@@ -105,7 +107,6 @@ const createNewPizzaObject = () => {
     photo: newPizzaPhoto,
   };
 
-  console.log(newPizza);
   return newPizza;
 };
 

@@ -11,7 +11,7 @@ window.onload = function () {
   let pizzasListFromLocalStorage = localStorage.getItem('pizzasList');
   pizzasList = JSON.parse(pizzasListFromLocalStorage);
 
-  showPizzasInMenu();
+  return showPizzasInMenu();
 };
 
 //FUNCTIONS
@@ -38,6 +38,8 @@ const showPizzasInMenu = () => {
       deletePizza(index);
     });
   });
+
+  return;
 };
 
 const getPizzaNameHtml = (pizza) => {
@@ -108,8 +110,9 @@ const deletePizza = (btnIndex) => {
     pizzasList.splice(btnIndex, 1);
 
     localStorage.setItem('pizzasList', JSON.stringify(pizzasList));
-    showPizzasInMenu();
+    return showPizzasInMenu();
   }
+  return;
 };
 
 const sortPizzasList = (sortValue) => {
