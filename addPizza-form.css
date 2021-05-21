@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;1,400&display=swap');
+
+/* RESETS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* MOBILE FIRST */
+
+.form-wrapper {
+  width: calc(100vw - (100vw - 100%));
+  min-height: 100vh;
+  background-image: url(assets/—Pngtree—delicious\ pizza\ background\ material_1050243.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-arrow {
+  padding-top: 45px;
+  width: 70%;
+  text-align: left;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-family: Raleway, sans-serif;
+  color: #ebad00;
+  cursor: pointer;
+}
+
+.back-arrow i {
+  padding-right: 5px;
+}
+
+.add-pizza-form__heading {
+  padding: 20px 0px;
+  color: white;
+  font-family: Raleway, sans-serif;
+}
+
+.add-pizza-form {
+  height: 100%;
+  width: 70%;
+  font-family: Raleway, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-pizza-form__inputs-items {
+  width: 100%;
+}
+
+.add-pizza-form__inputs-item {
+  padding: 12px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.add-pizza-form__inputs-item label {
+  padding-bottom: 7px;
+  color: white;
+  font-size: 1.1em;
+}
+
+.add-pizza-form__inputs-item input {
+  font-family: Raleway, sans-serif;
+  padding: 6px 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+}
+
+.add-pizza-form__inputs-item input:focus {
+  outline: none;
+  border: 3px solid #ebad00;
+}
+
+.pizza-toppings {
+  display: flex;
+  flex-direction: column;
+}
+
+.pizza-toppings input {
+  margin-bottom: 7px;
+}
+
+.add-more-toppings-btn {
+  margin: 8px 0px;
+  padding: 3px 0px;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+  background-color: transparent;
+  width: 150px;
+}
+
+.add-more-toppings-btn span {
+  padding-right: 5px;
+}
+
+#pizza-photo {
+  padding: 6px 0px;
+}
+
+#pizza-photo:focus {
+  outline: none;
+  border: 3px solid #ebad00;
+}
+
+.add-pizza-btn {
+  margin-top: 20px;
+  padding: 5px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  width: 150px;
+  background-color: #ebad00;
+  font-family: Raleway, sans-serif;
+  color: white;
+  font-size: 1.2em;
+}
+
+.add-pizza-btn:focus {
+  outline: none;
+}
+
+.add-pizza-btn:hover {
+  transform: scale(1.1);
+}
+
+.submit-error-msg {
+  width: 100%;
+  padding-top: 30px;
+  color: white;
+  font-style: italic;
+}
+
+.successful-submit-msg {
+  padding-top: 20px;
+  font-family: Raleway, sans-serif;
+  color: #ebad00;
+}
+
+/* SMALL SCREENS, LAPTOPS */
+
+@media screen and (min-width: 768px) {
+  .add-pizza-form {
+    width: 55%;
+  }
+
+  .back-arrow {
+    width: 55%;
+  }
+}
+
+/* DESKTOPS */
+
+@media screen and (min-width: 1025px) {
+  .add-pizza-form {
+    width: 40%;
+  }
+
+  .back-arrow {
+    width: 40%;
+  }
+}

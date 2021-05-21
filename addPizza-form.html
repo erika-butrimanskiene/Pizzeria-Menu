@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Pizza Form</title>
+    <link rel="stylesheet" href="addPizza-form.css" />
+    <script src="https://kit.fontawesome.com/7034fa63e0.js"></script>
+    <script defer src="addPizza-form.js" type="module"></script>
+  </head>
+  <body>
+    <main>
+      <div class="form-wrapper">
+        <a href="/index.html" class="back-arrow">
+          <i class="fas fa-arrow-left"></i>To menu
+        </a>
+
+        <form class="add-pizza-form">
+          <h1 class="add-pizza-form__heading">Add new pizza</h1>
+          <div class="add-pizza-form__inputs-items">
+            <div class="add-pizza-form__inputs-item">
+              <label for="name">Pizza name</label>
+              <input
+                class="pizza-name form-input"
+                type="text"
+                id="name"
+                maxlength="10"
+                required
+              />
+            </div>
+
+            <div class="add-pizza-form__inputs-item">
+              <label for="price">Pizza price</label>
+              <input
+                class="pizza-price form-input"
+                type="number"
+                min="0"
+                step="0.05"
+                id="price"
+                required
+              />
+            </div>
+
+            <div class="add-pizza-form__inputs-item">
+              <label for="heat">Pizza heat</label>
+              <input
+                class="pizza-heat form-input"
+                type="number"
+                min="1"
+                max="3"
+              />
+            </div>
+
+            <div class="add-pizza-form__inputs-item">
+              <div class="pizza-toppings">
+                <label for="toppings">Pizza toppings</label>
+                <input
+                  class="pizza-topping topping-first form-input"
+                  type="text"
+                  required
+                />
+                <input
+                  class="pizza-topping topping-second form-input"
+                  type="text"
+                  required
+                />
+                <!-- add new toppings inputs -->
+              </div>
+              <div>
+                <button class="add-more-toppings-btn">
+                  <span>+</span> Add more toppings
+                </button>
+              </div>
+            </div>
+
+            <div class="add-pizza-form__inputs-item">
+              <label for="pizza-photo">Pizza photo</label>
+              <select class="form-input" name="photo" id="pizza-photo">
+                <option value="---">----</option>
+                <option value="./assets/pizzas-img/Brooklyn.png">
+                  Brooklyn
+                </option>
+                <option value="./assets/pizzas-img/Bufala.png">Bufala</option>
+                <option value="./assets/pizzas-img/Bologneze.png">
+                  Bologneze
+                </option>
+                <option value="./assets/pizzas-img/Pepperoni.png">
+                  Pepperoni
+                </option>
+                <option value="./assets/pizzas-img/Saliami.png">Saliami</option>
+                <option value="./assets/pizzas-img/Special.png">Special</option>
+                <option value="./assets/pizzas-img/Vegana.png">Vegana</option>
+              </select>
+            </div>
+          </div>
+          <p class="successful-submit-msg"></p>
+          <div>
+            <button class="add-pizza-btn">Add Pizza</button>
+          </div>
+          <p class="submit-error-msg"></p>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
